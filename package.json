@@ -1,0 +1,14 @@
+{
+  "name": "rocket-chat-monorepo",
+  "private": true,
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "build": "npm run --workspaces build",
+    "dev": "concurrently \"npm run --workspace=@rocket/server dev\" \"npm run --workspace=@rocket/client dev\"",
+    "install-all": "npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "typescript": "^5.2.2"
+  }
+}
